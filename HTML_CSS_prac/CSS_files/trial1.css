@@ -1,0 +1,208 @@
+/*CSS Selectors*/
+
+.header{
+    margin-top: 0;
+    font-style: italic;
+    font-family:Avenir,cursive;
+    margin-left: 600px;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    text-decoration: underline;
+    /*text-align: center;*/
+}
+
+.header:hover{
+    opacity: 0.6;
+    font-family: Avenir,sans-serif;
+    font-style: normal;
+    /*text-decoration: underline;*/
+}
+
+img {
+    width: 200px;
+    border-radius: 75px;
+    border: rgba(0, 0, 0, 0.45) solid;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 150px;
+    transition: opacity 0.15s;
+}
+
+img:hover{
+    opacity: 0.75;
+    background-color: black;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.15) ;
+}
+
+.username{
+    font-weight:bold;
+    font-family: Avenir,serif;
+}
+
+.description{
+    font-weight:normal;
+    font-family: AkayaKanadaka,sans-serif;
+
+}
+
+em{
+    color: #a432a4;
+    font-style: italic;
+}
+
+
+
+/*CSS for the buttons*/
+
+.intro{
+    width: 100px;
+    border:none ;
+    border-radius: 5px;
+    height:35px;
+    cursor: pointer;
+    background-color: rgb(200,0,0);
+    color: white;
+    margin-right: 10px;
+    transition: opacity 0.15s;
+    padding-left: 8px;
+    padding-right:8px;
+}
+
+.intro:hover{
+    opacity:0.6 ;
+}
+.intro:active{
+    opacity: 0.4;
+}
+
+.greet{
+    width: 70px;
+    height:35px;
+    background-color: white;
+    border-color: #2976d3;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: #2976d3;
+    cursor: pointer;
+    transition: background-color 0.15s,color 0.15s;
+
+}
+
+.greet:hover{
+    background-color: #2976d3;
+    color: white;
+}
+
+.greet:active{
+    opacity: 0.6;
+}
+
+.scare{
+    background-color: #029eff;
+    color: white;
+    border: none ;
+    height: 35px;
+    width: 72px;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: box-shadow 0.15s ;
+
+}
+
+.scare:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.15);
+}
+
+/*CSS for the text*/
+
+.speech{
+    font-family: "Roboto Thin",sans-serif;
+    font-weight: bold;
+    font-size:18px;
+    margin-bottom:2px;
+    width:300px;
+}
+
+.view{
+    font-family: Arial,serif;
+    font-size: 12px;
+    color: #606060;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.author{
+    font-family: Arial,serif;
+    font-size: 14px;
+    margin-top:0;
+    color: #606060;
+    margin-bottom: 15px;
+}
+
+.tiger-desc{
+    font-family: Arial,serif;
+    font-size: 14px;
+    color: #606060;
+    width:300px;
+    line-height: 20px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.tiger-ad{
+    font-family: Arial,serif;
+    font-size: 14px;
+    background-color: #e34140;
+    width: 500px;
+    text-align: center;
+    color: white;
+    padding-top: 15px;
+    padding-bottom:15px;
+}
+.span{
+    margin-left: 6px;
+}
+.span:hover{
+    text-decoration: underline;
+}
+
+.Learn{
+    color: white;
+    text-decoration: none;
+}
+
+.tiger-desc_2{
+    font-family: Arial,serif;
+    font-size: 12px;
+    color: #606060;
+    margin-bottom: 0;
+}
+.email{
+    width:200px;
+    padding: 2px;
+    margin-top: 10px;
+}
+
+.accept{
+    margin-top: 10px;
+    width: 300px;
+    height: 40px;
+    border: None;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 75px;
+    background-color: #009eff;
+    color: white;
+    transition: opacity 0.15s;
+    cursor: pointer;
+}
+
+.accept:hover{
+    opacity: 0.75;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.15) ;
+}
