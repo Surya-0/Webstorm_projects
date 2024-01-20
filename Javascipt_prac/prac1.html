@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A simple trial</title>
+    <style>
+        button{
+            border-radius: 10px;
+            border-style: solid;
+            border-color: black;
+            background-color:lightblue;
+            font-family:Avenir, cursive;
+            font-size:14px;
+            cursor: pointer;
+            transition: opacity 0.15s;
+            animation-name: button_anim;
+            animation-duration: 4s;
+            animation-delay: 2s;
+        }
+        button:hover{
+            opacity: 0.65;
+        }
+        p{
+            font-family: Avenir, cursive;
+
+        }
+        @keyframes button_anim {
+            from {background-color: aquamarine;}
+            to {background-color: lightblue;}
+        }
+    </style>
+</head>
+<body>
+    <button title="Hello">Hello world</button>
+    <p>
+        Hi this is a good
+        <button>
+            little
+        </button>
+        boy
+    </p>
+</body>
+</html>
