@@ -2,18 +2,80 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Variables</title>
+    <title>Cart Quantity</title>
+    <style>
+        .heading{
+            margin-left: 150px;
+        }
+
+        .qty,.cart,.reset{
+            background-color: aquamarine;
+            border-radius: 11px;
+            height:25px;
+            width:100px;
+            transition: opacity 0.15s;
+            border: black solid;
+        }
+
+        .qty:hover,.cart:hover,.reset:hover{
+            opacity: 0.6;
+        }
+
+        .num{
+            background-color: aquamarine;
+            border-radius: 5px;
+            height:25px;
+            width:30px;
+            transition: opacity 0.15s;
+            border: black solid;
+        }
+
+
+
+    </style>
 </head>
 <body>
+    <p class="heading">Cart Quantity</p>
+
+    <button class = 'qty' onclick="console.log(`Cart Quantity: ${cart_qty}`)">
+        Show quantity
+    </button>
+
+    <button class = 'cart'
+            onclick="
+            cart_qty = cart_qty+1;
+            console.log(`Cart Quantity: ${cart_qty}`);">
+        Add to Cart
+    </button>
+
+    <button class = 'num'
+            onclick="
+            cart_qty = cart_qty+2;
+            console.log(`Cart Quantity: ${cart_qty}`);">
+        +2
+    </button>
+
+    <button class = 'num'
+            onclick="
+            cart_qty = cart_qty+3;
+            console.log(`Cart Quantity: ${cart_qty}`);">
+        +3
+    </button>
+
+    <button class="reset"
+            onclick="
+            cart_qty = 0;
+            console.log('Cart was reset');
+            console.log(`Cart Quantity: ${cart_qty}`);">
+        Reset Cart
+    </button>
+
     <script>
         // In javascript a semicolon means the end of an instruction
-        let variable1 = 3;
-        console.log(variable1);
-        variable1 = 5;
-        console.log(variable1);
 
-        let message = "Hello world";
-        console.log(message);
+        let cart_qty = 0;
+        console.log(typeof cart_qty);
+
     </script>
 </body>
 </html>
