@@ -11,15 +11,7 @@
             onclick="
             let result = '';
             let comp_move = pickComputerMove();
-            if(comp_move === 'rock'){
-                result = 'tie!';
-            }
-            else if(comp_move === 'paper'){
-                result = 'you lose!!!';
-            }
-            else if(comp_move === 'scissors'){
-                result = 'you win!!!';
-            }
+            result = compare(comp_move,'rock');
             alert(`You picked rock. Computer picked ${comp_move}. ${result}`);">
         Rock
     </button>
@@ -28,15 +20,7 @@
             onclick="
             let result = '';
             let comp_move = pickComputerMove();
-            if(comp_move === 'rock'){
-                result = 'you win!!!';
-            }
-            else if(comp_move === 'paper'){
-                result = 'tie!';
-            }
-            else if(comp_move === 'scissors'){
-                result = 'you lose!!!';
-            }
+            result = compare(comp_move,'paper');
             alert(`You picked paper. Computer picked ${comp_move}. ${result}`);">
         Paper
     </button>
@@ -45,15 +29,7 @@
             onclick="
             let result = '';
             let comp_move = pickComputerMove();
-            if(comp_move === 'rock'){
-                result = 'you lose!!!';
-            }
-            else if(comp_move === 'paper'){
-                 result = 'you win!!!';
-            }
-            else if(comp_move === 'scissors'){
-                result = 'tie!';
-            }
+            result = compare(comp_move,'scissors');
             alert(`You picked scissors. Computer picked ${comp_move}. ${result}`);">
         Scissors
     </button>
@@ -87,6 +63,41 @@
             return comp_move;
         }
 
+        function compare(computer_move,your_move){
+            let result = '';
+
+            if(computer_move === 'rock' && your_move === 'paper'){
+                result = 'you win!!!';
+            }
+            else if(computer_move === 'paper' && your_move === 'paper'){
+                result = 'tie!';
+            }
+            else if(computer_move === 'scissors' && your_move === 'paper'){
+                result = 'you lose!!!';
+            }
+
+            else if(computer_move === 'rock' && your_move === 'rock'){
+                result = 'tie!';
+            }
+            else if(computer_move === 'paper' && your_move === 'rock'){
+                result = 'you lose!!!';
+            }
+            else if(computer_move === 'scissors' && your_move === 'rock'){
+                result = 'you win!!!';
+            }
+
+            else if(computer_move === 'rock' && your_move === 'scissors'){
+                result = 'you lose!!!';
+            }
+            else if(computer_move === 'paper' && your_move === 'scissors'){
+                result = 'you win!!!';
+            }
+            else if(computer_move === 'scissors' && your_move === 'scissors'){
+                result = 'tie!';
+            }
+
+            return result;
+        }
     </script>
 </body>
 </html>
