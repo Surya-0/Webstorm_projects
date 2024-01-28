@@ -12,7 +12,9 @@
             let result = '';
             let comp_move = pickComputerMove();
             result = compare(comp_move,'rock');
-            alert(`You picked rock. Computer picked ${comp_move}. ${result}`);">
+            check_result(result);
+            alert(`You picked rock. Computer picked ${comp_move}. ${result}
+Wins:${score.wins},Losses:${score.losses},Ties:${score.ties}`);">
     Rock
 </button>
 
@@ -21,7 +23,9 @@
             let result = '';
             let comp_move = pickComputerMove();
             result = compare(comp_move,'paper');
-            alert(`You picked paper. Computer picked ${comp_move}. ${result}`);">
+            check_result(result);
+            alert(`You picked rock. Computer picked ${comp_move}. ${result}
+Wins:${score.wins},Losses:${score.losses},Ties:${score.ties}`);">
     Paper
 </button>
 
@@ -30,11 +34,27 @@
             let result = '';
             let comp_move = pickComputerMove();
             result = compare(comp_move,'scissors');
-            alert(`You picked scissors. Computer picked ${comp_move}. ${result}`);">
+            check_result(result);
+            alert(`You picked rock. Computer picked ${comp_move}. ${result}
+Wins:${score.wins},Losses:${score.losses},Ties:${score.ties}`);">
     Scissors
 </button>
 
+<button
+    onclick="
+    score.wins = 0;
+    score.losses =0;
+    score.ties =0;
+    ">
+    Reset Score
+</button>
+
 <script>
+    let score = { // add an object and store the wins and losses
+        wins:0,
+        losses:0,
+        ties:0
+    };
     function pickComputerMove(){
         let comp_move = '';
         const randNum = Math.random();
@@ -86,6 +106,19 @@
         }
 
         return result;
+
+    }
+
+    function check_result(result){
+        if(result==='you win!!!'){
+            score.wins+=1;
+        }
+        else if(result==='you lose!!!'){
+            score.losses+=1;
+        }
+        else if(result === 'tie!'){
+            score.ties+=1;
+        }
     }
 </script>
 </body>
