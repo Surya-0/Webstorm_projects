@@ -50,11 +50,8 @@ Wins:${score.wins},Losses:${score.losses},Ties:${score.ties}`);">
 </button>
 
 <script>
-    let score = { // add an object and store the wins and losses
-        wins:0,
-        losses:0,
-        ties:0
-    };
+    let score = JSON.parse(localStorage.getItem('score'))
+
     function pickComputerMove(){
         let comp_move = '';
         const randNum = Math.random();
@@ -119,7 +116,9 @@ Wins:${score.wins},Losses:${score.losses},Ties:${score.ties}`);">
         else if(result === 'tie!'){
             score.ties+=1;
         }
+        localStorage.setItem('score',JSON.stringify(score)); // used for saving the data onto our local storage
     }
+
 </script>
 </body>
 </html>
