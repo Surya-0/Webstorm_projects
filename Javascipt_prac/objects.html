@@ -36,7 +36,11 @@
         console.log(product.fun(2));
         console.log(typeof console);
         console.log(typeof Math);
-        console.log(typeof JSON); // JSON stands for Javascript object notation
+        console.log(typeof JSON); // JSON stands for Javascript object notation.It has built-in functions to convert our object to JSON object
+
+        console.log(JSON.stringify(product));// you will notice that the function we saved is not displayed in the console as JSON doesn't support functions
+        let JSON_string = JSON.stringify(product);
+        console.log(JSON.parse(JSON_string));// turns the JSON string back into a javascript object
     </script>
 </body>
 </html>
